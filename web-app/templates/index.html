@@ -12,20 +12,23 @@
 
   <div class="box">
 
-  <form action="/predict" method="post">
-    <input name="RevolvingUtilizationOfUnsecuredLines" type="number" step="any" placeholder="Utilización crédito">
-    <input name="age" type="number" step="any" placeholder="Edad">
-    <input name="NumberOfTime30-59DaysPastDueNotWorse" type="number" step="any" placeholder="Moras 30-59">
-    <input name="DebtRatio" type="number" step="any" placeholder="Debt Ratio">
-    <input name="MonthlyIncome" type="number" step="any" placeholder="Ingreso mensual">
-    <input name="NumberOfOpenCreditLinesAndLoans" type="number" step="any" placeholder="Créditos abiertos">
-    <input name="NumberOfTimes90DaysLate" type="number" step="any" placeholder="Moras 90+">
-    <input name="NumberRealEstateLoansOrLines" type="number" step="any" placeholder="Préstamos inmobiliarios">
-    <input name="NumberOfTime60-89DaysPastDueNotWorse" type="number" step="any" placeholder="Moras 60-89">
-    <input name="NumberOfDependents" type="number" step="any" placeholder="Dependientes">
+    <h2>Modelo de Predicción de Riesgo de Default</h2>
+    <p>Ingrese los datos del prestatario para estimar la probabilidad de incumplimiento en los próximos 2 años.</p>
 
-    <button type="submit">Predecir</button>
-  </form>
+    <form action="/predict" method="post">
+      <input name="RevolvingUtilizationOfUnsecuredLines" type="number" step="any" placeholder="Utilización crédito">
+      <input name="age" type="number" step="any" placeholder="Edad">
+      <input name="NumberOfTime30-59DaysPastDueNotWorse" type="number" step="any" placeholder="Moras 30-59">
+      <input name="DebtRatio" type="number" step="any" placeholder="Debt Ratio">
+      <input name="MonthlyIncome" type="number" step="any" placeholder="Ingreso mensual">
+      <input name="NumberOfOpenCreditLinesAndLoans" type="number" step="any" placeholder="Créditos abiertos">
+      <input name="NumberOfTimes90DaysLate" type="number" step="any" placeholder="Moras 90+">
+      <input name="NumberRealEstateLoansOrLines" type="number" step="any" placeholder="Préstamos inmobiliarios">
+      <input name="NumberOfTime60-89DaysPastDueNotWorse" type="number" step="any" placeholder="Moras 60-89">
+      <input name="NumberOfDependents" type="number" step="any" placeholder="Dependientes">
+
+      <button type="submit">Predecir</button>
+    </form>
 
   {% if prediction_text %}
     <h3>{{ prediction_text }}</h3>

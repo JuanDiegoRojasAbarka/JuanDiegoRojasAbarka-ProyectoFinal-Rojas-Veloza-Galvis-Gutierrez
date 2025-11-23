@@ -1,29 +1,108 @@
+/* ======= ESTILO GENERAL ======= */
 body {
-	width: 100%;
-	height: 100%;
-	font-family: 'Helvetica';
-	background: black;
-	color: #fff;
-	text-align: center;
-	letter-spacing: 1.4px;
-	font-size: 30px;
+  font-family: Arial, sans-serif;
+  background: #0f1e15; /* verde muy oscuro */
+  margin: 0;
+  padding: 0;
+  color: #e8f5e9;
 }
 
-input {
-	min-width: 150px;
-}
-
+/* ======= GRID PRINCIPAL ======= */
 .grid {
-	width: 300px;
-	border: 1px solid #2d2d2d;
-	display: grid;
-	justify-content: center;
-	margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+  min-height: 100vh;
 }
 
+/* ======= TARJETA ======= */
 .box {
-	color: #fff;
-	background: #2d2d2d;
-	padding: 12px;
-	display: inline-block;
+  background: #1b3b2a; /* verde elegante */
+  padding: 50px 70px;
+  width: 850px;
+  border-radius: 16px;
+  box-shadow: 0px 8px 30px rgba(0,0,0,0.4);
+  color: #dfffe4;
+}
+
+/* ======= ENCABEZADO ======= */
+.box h2 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 12px;
+  color: #a8ffb5; 
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.box p {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 35px;
+  color: #c7ffd3;
+  font-size: 17px;
+}
+
+/* ======= GRID DE 2 COLUMNAS ======= */
+form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 50px;
+  row-gap: 25px;
+  width: 100%;
+}
+
+/* ======= INPUTS ======= */
+form input {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #355c47;
+  background: #264c38; 
+  color: #e8ffe8;
+  box-sizing: border-box;
+  transition: 0.25s;
+}
+
+form input::placeholder {
+  color: #b7d8c1;
+}
+
+form input:focus {
+  border-color: #4dff8c;
+  box-shadow: 0 0 6px rgba(77, 255, 140, 0.5);
+  outline: none;
+}
+
+/* ======= BOTÓN ======= */
+form button {
+  grid-column: 1 / 3;
+  padding: 14px 40px;
+  background: #2ecc71;
+  color: #0a1a11;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.35s;
+  justify-self: center;
+}
+
+form button:hover {
+  background: #0a1a11;
+  color: #2ecc71;
+  box-shadow: 0 0 12px rgba(46, 204, 113, 0.6);
+}
+
+/* ======= RESULTADOS ======= */
+h3, h3 + p {
+  grid-column: 1 / 3;
+  text-align: center;
+  margin-top: 25px;
+  color: #c8ffd7;
+  font-size: 20px;
+  font-weight: bold;
 }
